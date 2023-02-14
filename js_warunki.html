@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Zadanie 1
+            // const liczba = prompt('podaj liczbe: ')
+            // if (liczba % 2 == 0) {
+            //     document.write('Podana liczba jest parzysta')
+            // } else {
+            //     document.write('Podana liczba jest nieparzysta')
+            // }
+
+            // Zadanie 2
+            // const liczba = prompt('podaj liczbe: ')
+            // if (liczba > 5 && liczba != 6 && liczba != 12 || liczba == 0) {
+            //     alert('spełnia warunek')
+            // } else {
+            //     alert('nie spełnia warunku')
+            // }
+
+            // Zadanie 3
+            // const dzien = prompt('podaj numer dnia tygodnia ');
+            // if (dzien == 1) {
+            //     alert('Poniedziałek');
+            // } else if (dzien == 2) {
+            //     alert('Wtorek');
+            // } else if (dzien == 3) {
+            //     alert('Środa');
+            // } else if (dzien == 4) {
+            //     alert('Czwartek');
+            // } else if (dzien == 5) {
+            //     alert('Piątek');
+            // } else if (dzien == 6) {
+            //     alert('Sobota');
+            // } else if (dzien == 7) {
+            //     alert('Niedziela')
+            // } else {
+            //     alert('nie ma tekiego dnia tygodnia')
+            // }
+            
+            // Zadanie 4
+            // let przedzial_A = prompt('Podaj poczatek przedzialu');
+            // let przedzial_B = prompt('Podaj koniec przedzialu');
+            // let liczba = prompt('Podaj liczbe' );
+            // if (parseInt(liczba) > parseInt(przedzial_A) && parseInt(liczba) < parseInt(przedzial_B)) {
+            //     alert('liczba jest z przedzialu <' + przedzial_A + ';' + przedzial_B + '>')
+            // } else {
+            //     alert('liczba nie jest z przedzialu <' + przedzial_A + ';' + przedzial_B + '>')
+            // }
+
+            // Zadanie 5
+            // const liczba1 = prompt('podaj 1. liczbe');
+            // const liczba2 = prompt('podaj 2. liczbe');
+            // const liczba3 = prompt('podaj 3. liczbe')
+            // if (liczba1 > liczba2 && liczba1 > liczba3) {
+            //     alert(liczba1 + ' jest najwieksza')
+            // } else if (liczba2 > liczba1 && liczba2 > liczba3) {
+            //     alert(liczba2 + ' jest najwieksza')
+            // } else {
+            //     alert(liczba3 + ' jest najwieksza')
+            // }
+
+            // Zadnie 6
+            // const liczba1 = prompt('podaj 1. liczbe')
+            // const liczba2 = prompt('podaj 2. liczbe')
+            // if (liczba1 % liczba2 == 0) {
+            //     alert(liczba1 + ' jest podzielna przez ' + liczba2)
+            // } else {
+            //     alert(liczba1 + ' nie jest podzielna przez ' + liczba2)
+            // }
+
+            // Zadanie 7
+            // const dzialanie = prompt('podaj jakie dzialanie chcesz wykonac ("+" - dodawanie, "-" - odejmowanie, "*" - mnożenie, "/" - dzielenie)')
+            // let liczba1
+            // let liczba2
+            // let wynik
+            // if (dzialanie === '+') {
+            //     liczba1 = prompt('podaj pierwsza liczbe')
+            //     liczba2 = prompt('podaj druga liczbe')
+            //     wynik = liczba1 + liczba2
+            //     alert('wynik to: ' + wynik)
+            // } else if (dzialanie === '-') {
+            //     liczba1 = prompt('podaj pierwsza liczbe')
+            //     liczba2 = prompt('podaj druga liczbe')
+            //     wynik = liczba1 - liczba2
+            //     alert('wynik to: ' + wynik)    
+            // } else if (dzialanie === '*') {
+            //     liczba1 = prompt('podaj pierwsza liczbe')
+            //     liczba2 = prompt('podaj druga liczbe')
+            //     wynik = liczba1 * liczba2
+            //     alert('wynik to: ' + wynik)    
+            // } else if (dzialanie === '/') {
+            //     liczba1 = prompt('podaj pierwsza liczbe')
+            //     liczba2 = prompt('podaj druga liczbe')
+            //     wynik = liczba1 / liczba2
+            //     alert('wynik to: ' + wynik)    
+            // } else {
+            //     alert('nie wybrano poprawnego dzialania')
+            // }
+
+            // Zadanie 8
+            // const miesiac = prompt('podaj numer miesiąca');
+            // switch (parseInt(miesiac)) {
+            //     case 1:
+            //     alert('podany miesiąc to styczeń')
+            //     break;
+            //     case 2:
+            //     alert('podany miesiąc to luty')
+            //     break;
+            //     case 3:
+            //     alert('podany miesiąc to marzec')
+            //     break;
+            //     case 4:
+            //     alert('podany miesiąc to kwiecień')
+            //     break;
+            //     case 5:
+            //     alert('podany miesiąc to maj')
+            //     break;
+            //     case 6:
+            //     alert('podany miesiąc to czerwiec')
+            //     break;
+            //     case 7:
+            //     alert('podany miesiąc to lipiec')
+            //     break;
+            //     case 8:
+            //     alert('podany miesiąc to sierpień')
+            //     break;
+            //     case 9:
+            //     alert('podany miesiąc to wrzesień')
+            //     break;
+            //     case 10:
+            //     alert('podany miesiąc to październik')
+            //     break;
+            //     case 11:
+            //     alert('podany miesiąc to listopad')
+            //     break;
+            //     case 12:
+            //     alert('podany miesiąc to grudzień')
+            //     break;
+
+            //     default: 
+            //     alert('podano nieprawidlowy numer miesiaca')
+            // }
+
+            // Zadanie 10
+            const figura = prompt('podaj jakiej figury pole chcesz obliczyć T - trójkąt, K - kwadrat, P - prostokąt')
+            let a;
+            let b;
+            let wynik;
+            if (figura === 'T') {
+                a = prompt('podaj bok trojkata')
+                b = prompt('podaj wysokosc trójkąta')
+                wynik = 0.5 * a * b;
+                alert('pole trójkąta to: ' + wynik)
+            } else if (figura === 'K') {
+                a = prompt('podaj bok kwadratu')
+                wynik = a * a;
+                alert('pole kwadratu to: ' + wynik)
+            } else if (figura === 'P') {
+                a = prompt('podaj 1. bok prostokąta')
+                b = prompt('podaj 2. bok prostokąta')
+                wynik = a * b;
+                alert('pole prostokąta wynosi: ' + wynik)
+            }
+
+        </script>
+    </body>
+</html>
