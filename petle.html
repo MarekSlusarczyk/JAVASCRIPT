@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pętle</title>
+    </head>
+    <body>
+        <script>
+            // Zadanie 1
+            // let liczba_a = parseInt(prompt('podaj długość'));
+            // let liczba_b = parseInt(prompt('podaj wysokość'));
+            // for(let i = 0; i < liczba_a; i++) {
+            //     document.write('*')
+            // }
+            // document.write('<br>')
+            // for(let i = 0; i < liczba_b-2; i++) {
+            //     document.write('*')
+            //     let s = 0;
+            //     let j = liczba_a;
+            //     if (j >= 5) {
+            //         let spacje_dodatkowe = 0;
+            //         spacje_dodatkowe = j - 4;
+            //         j = j + spacje_dodatkowe;
+            //     }
+            //     while(s < j) {
+            //         document.write('&nbsp;');
+            //         s++;
+            //     }
+            //     document.write('*')
+            //     document.write('<br>')
+            // }
+            // for(let i = 0; i < liczba_a; i++) {
+            //     document.write('*')
+            // }
+
+            // Zadanie 2
+            // let poczatekPrzedzialu = parseInt(prompt('podaj początek przedziału'));
+            // let koniecPrzedzialu = parseInt(prompt('podaj koniec przedziału'));
+            // for(let i = poczatekPrzedzialu; i <= koniecPrzedzialu; i++) {
+            //     if (i % 5 == 0) {
+            //         document.write(i, '<br>')
+            //     }
+            // }
+
+            // Zadanie 3
+            // let liczba_a = parseInt(prompt('podaj pierwszą liczbę'));
+            // let liczba_b = parseInt(prompt('podaj drugą liczbę'));
+            // let a = liczba_a;
+            // let b = liczba_b;
+            // while(a != b) {
+            //     if (a > b) {
+            //         a = a - b;
+            //     } else {
+            //         b = b - a
+            //     }
+            // }
+            // console.log("NWD ", liczba_a, " i ", liczba_b, " to ", a)
+
+            // Zadanie 4
+            // let liczba = parseInt(prompt('podaj liczbę'));
+            // let silnia = 1;
+            // for(let i = liczba; i > 1; i--) {
+		    //     silnia = silnia * i;
+            // }
+            // document.write("!", liczba, " to ", silnia)
+
+            // Zadanie 5
+            // let poczatekPrzedzialu = parseInt(prompt('podaj początek przedziału'));
+            // let koniecPrzedzialu = parseInt(prompt('podaj koniec przedziału'));
+            // for(let i = poczatekPrzedzialu; i <= koniecPrzedzialu; i++) {
+            //     if (i % 2 == 0) {
+            //         document.write(i, '<br>')
+            //     }
+            // }
+
+            // Zadanie 6
+            // let liczba = parseInt(prompt('podaj liczbę do sprawdzenia'));
+            // if (liczba < 2) {
+            //     document.write("Liczba ", liczba, " nie jest liczbą pierwszą, bo jest mniejsza niż dwa")
+            // } else if (liczba == 3) { 
+            //     document.write("Liczba ", liczba, " jest liczbą pierwszą")
+            // } else {
+            //     for(let i = 2; i * i <= liczba; i++) {
+            //         if(liczba % i == 0) {
+            //             document.write("Liczba ", liczba, " nie jest liczbą pierwszą")
+            //             break;
+            //         } else {
+            //             document.write("Liczba ", liczba, " jest liczbą pierwszą")
+            //             break;
+            //         }
+            //     }
+            // }
+
+            // Zadanie 7
+            // let liczbaPoczatkowa = parseInt(prompt('podaj liczbę poczatkową'));
+            // let liczbaKoncowa = parseInt(prompt('podaj liczbę końcową'));
+            // let wynik = 0;
+            // let srednia = 0;
+            // let ileLiczb = 0;
+            // for(let i = liczbaPoczatkowa; i <= liczbaKoncowa; i++) {
+            //     wynik = wynik + i;
+            //     console.log(wynik);
+            //     ileLiczb++;
+            // }
+            // srednia = wynik / ileLiczb;
+            // document.write("Średnia to: ", srednia)
+
+            // Zadanie 8
+            // let poczatekPrzedzialu = parseInt(prompt('podaj początek przedziału'));
+            // let koniecPrzedzialu = parseInt(prompt('podaj koniec przedziału'));
+            // let iloscParzystych = 0;
+            // let iloscNieparzystych = 0;
+            // for(let i = poczatekPrzedzialu; i <= koniecPrzedzialu; i++) {
+            //     if (i % 2 == 0) {
+            //         iloscParzystych++;
+            //     } else {
+            //         iloscNieparzystych++;
+            //     }
+            // }
+            // document.write("Liczb parzystych w przedziale jest: ", iloscParzystych, "<br>Liczb nieparzystych w przedziale jest: ", iloscNieparzystych)
+
+            // Zadanie 9
+            // let liczba = parseInt(prompt("Podaj liczbę: "));
+            // document.write("Dzielniki liczby ", liczba, " to: <br>");
+            // for(let i = 1; i <= liczba; i++) {
+            //     if(liczba % i === 0) {
+            //         document.write(i, "<br>")
+            //     }
+            // }
+            // let i = 1;
+            // while(i <= liczba) {
+            //     if(liczba % i === 0) {
+            //         document.write(i, "<br>")
+            //     }
+            //     i++;
+            // }
+            // let i = 1;
+            // do {
+            //     if(liczba % i === 0) {
+            //         document.write(i, "<br>")
+            //     }
+            //     i++;
+            // } while(i <= liczba);
+
+            // Zadanie 10
+            for(let i = 1; i <= 10; i++) {
+                let tabliczka = "";
+                for(let j = 1; j <= 10; j++) {
+                    tabliczka = tabliczka + i * j + ' ';
+                }
+                if (i > 1) {
+                    document.write('<br>')
+                }
+                document.write(tabliczka);
+            }
+
+        </script>
+    </body>
+</html>
