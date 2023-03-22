@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="block"></div>
+        <script>
+            // Zadanie 1
+            // const liczba = parseInt(prompt("Podaj liczbe"));
+            // if (liczba % 2 == 0) {
+            //     document.write("Liczba jest parzysta");
+            // } else {
+            //     document.write("Liczba jest nieparzysta");
+            // };
+
+            // Zadanie 2
+            // const n = parseInt(prompt("Podaj liczbe"));
+            // let ileParzystych = 0;
+            // let ileNieparzystych = 0;
+            // for(let i = 1; i <= n; i++) {
+            //     if (i % 2 == 0) {
+            //         ileParzystych++;
+            //     } else {
+            //         ileNieparzystych++;
+            //     }
+            // }
+
+            // document.write("Ilosc parzystych: ", ileParzystych)
+            // document.write('<br>')
+            // document.write("Ilosc nieparzystych: ", ileNieparzystych)
+
+            // Zadanie 1
+            // let liczba_a = parseInt(prompt('podaj długość'));
+            // let liczba_b = parseInt(prompt('podaj wysokość'));
+            // for(let i = 0; i < liczba_a; i++) {
+            //     document.write('*')
+            // }
+            // document.write('<br>')
+            // for(let i = 0; i < liczba_b-2; i++) {
+            //     document.write('*')
+            //     let s = 0;
+            //     let j = liczba_a;
+            //     if (j >= 5) {
+            //         let spacje_dodatkowe = 0;
+            //         spacje_dodatkowe = j - 4;
+            //         j = j + spacje_dodatkowe;
+            //     }
+            //     while(s < j) {
+            //         document.write('&nbsp;');
+            //         s++;
+            //     }
+            //     document.write('*')
+            //     document.write('<br>')
+            // }
+            // for(let i = 0; i < liczba_a; i++) {
+            //     document.write('*')
+            // }
+            //$('block').append('*')
+            let liczba_a = parseInt(prompt('podaj długość'));
+            let liczba_b = parseInt(prompt('podaj wysokość'));
+            for(let i = 0; i < liczba_a; i++) {
+               $('#block').append('*')
+            }
+           $('#block').append('<br>')
+            for(let i = 0; i < liczba_b-2; i++) {
+               $('#block').append('*')
+                for(let i = 0; i < liczba_a-2; i++) {
+                   $('#block').append('<span style="opacity:0;">*</span>')
+                }
+               $('#block').append('*')
+               $('#block').append('<br>')
+            }
+            for(let i = 0; i < liczba_a; i++) {
+               $('#block').append('*')
+            }
+        </script>
+    </body>
+</html>
