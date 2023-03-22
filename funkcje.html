@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funkcje</title>
+    </head>
+    <body>
+        <script>
+            // Zadanie 1
+            // function zdanie() {
+            //     document.write('Skrypt w JavaScript')
+            // }
+
+            // zdanie();
+
+            // Zadanie 2
+            // let liczba_1 = prompt('Podaj 1. liczbę');
+            // let liczba_2 = prompt('Podaj 2. liczbę');
+            // oblicz(liczba_1, liczba_2)
+        
+            // function oblicz(a, b) {
+            //     document.write(a*b);
+            // }
+
+            // Zadanie 3
+            // let liczba_1 = prompt('Podaj 1. liczbę');
+            // let liczba_2 = prompt('Podaj 2. liczbę');
+            // document.write(suma(liczba_1, liczba_2));
+
+            // function suma(a, b) {
+            //     return potegaTrzecia(a, b);
+            // }
+
+            // function potegaTrzecia(a, b) {
+            //     return (a*b) * (a*b) * (a*b);
+            // }
+
+            // Zadanie 4 
+            // let dzialanie = prompt("Podaj dzialanie do wykonania");
+            // let a = parseInt(prompt('Podaj pierwszą liczbę'));
+            // let b = parseInt(prompt('Podaj drugą liczbę'));
+
+            // wykonywanieDzialania(dzialanie, a, b);
+
+            // function wykonywanieDzialania(typ, liczba1, liczba2) {
+            //     let wynik;
+            //     if (typ === '+') {
+            //         wynik = dodawanie(liczba1, liczba2);
+            //     } else if (typ === '-') {
+            //         wynik = odejmowanie(liczba1, liczba2);
+            //     } else if (typ === '*') {
+            //         wynik = mnozenie(liczba1, liczba2);
+            //     } else if (typ === '/') {
+            //         wynik = dzielenie(liczba1, liczba2);
+            //     } else {
+            //         wynik = 'Podane dzialanie jest niepoprawne'
+            //     }
+            //     wyswietlanieWyniku(wynik);
+            // }
+
+            // function dodawanie(a, b) {
+            //     return a + b;
+            // }
+
+            // function odejmowanie(a, b) {
+            //     return a - b;
+            // }
+
+            // function mnozenie(a, b) {
+            //     return a * b;
+            // }
+
+            // function dzielenie(a, b) {
+            //     return a / b;
+            // }
+
+            // function wyswietlanieWyniku(wynik) {
+            //     document.write(wynik)
+            // }
+
+            // Zadanie 5
+            let n = parseInt(prompt('Podaj n (n <= 12)'))
+            let k = parseInt(prompt('Podaj k (k < n, 0 < k)'))
+            // sprawdz(k, n)
+            // function sprawdz() {
+            //     if (k > n) {
+            //         document.write("wartość k nie może być większa od n");
+            //         return
+            //     } else if (k <= 0) {
+            //         document.write("wartość k nie może być mniejsza od 0");
+            //         return
+            //     } else if (n < 12) {
+            //         document.write("wartość n nie może być mniejsza od 12");
+            //         return
+            //     }
+            // }
+
+            function obliczanieSilni(liczba) {
+                let silnia = 1
+                for (let i = 1; i <= liczba; i++) {   
+                    silnia = silnia * i;
+                }
+                return silnia;
+            }
+
+            function symbolNewtona() {
+                silniaN = obliczanieSilni(n);
+                silniaK = obliczanieSilni(k);
+                silniaNK = obliczanieSilni(n-k);
+
+                let wynik = (silniaN) / (silniaK) * (silniaNK);
+                document.write(wynik)
+            }
+
+
+            symbolNewtona();
+            // Zadanie 6
+            // let liczba = prompt('Podaj liczbę')
+            // document.write(ileCyfr(liczba));
+
+            // function ileCyfr(a) {
+            //     return a.length;
+            // }
+
+        </script>
+    </body>
+</html>
