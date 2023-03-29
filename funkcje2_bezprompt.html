@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funkcje</title>
+    </head>
+    <body>
+        <!-- <input name="rodzajDzialania" placeholder="(+, -, *, /)"> -->
+        <input name="liczba1" placeholder="Pierwsza liczba">
+        <input name="liczba2" placeholder="Druga liczba">
+        <button>Oblicz</button>
+        <div class="wynik"></div>
+        <script>
+            //Zadanie 2
+            // const liczba1 = document.querySelector('input[name=liczba1]')
+            // const liczba2 = document.querySelector('input[name=liczba2]')
+            // const btn = document.querySelector('button')
+            // const divWynik = document.querySelector('div.wynik')
+
+            // btn.addEventListener('click', () => {
+            //     let l1 = liczba1.value;
+            //     let l2 = liczba2.value;
+            //     divWynik.textContent=oblicz(l2, l1)
+            // })
+
+            // function oblicz(a, b) {
+            //     return a*b;
+            // }
+
+
+            //Zadanie 3
+
+            // const liczba1 = document.querySelector('input[name=liczba1]')
+            // const liczba2 = document.querySelector('input[name=liczba2]')
+            // const btn = document.querySelector('button')
+            // const divWynik = document.querySelector('div.wynik')
+
+
+            // function obliczSume(a, b) {
+            //     return parseInt(a) + parseInt(b);
+            // }
+            
+            // function potega(podstawaPotegi) {
+            //     return podstawaPotegi * podstawaPotegi * podstawaPotegi;
+            // }
+
+            // btn.addEventListener('click', () => {
+            //     let l1 = liczba1.value;
+            //     let l2 = liczba2.value;
+            //     let suma = obliczSume(l1, l2);
+            //     let wynik = potega(suma);
+            //     divWynik.textContent=wynik;
+            // })
+
+            //Zadanie 4
+            // const liczba1 = document.querySelector('input[name=liczba1]')
+            // const liczba2 = document.querySelector('input[name=liczba2]')
+            // const btn = document.querySelector('button')
+            // const divWynik = document.querySelector('div.wynik')
+            // const rodzajDzialania = document.querySelector('input[name=rodzajDzialania]')
+
+            // btn.addEventListener('click', () => {
+            //     let l1 = liczba1.value;
+            //     let l2 = liczba2.value;
+            //     let dzialanie = rodzajDzialania.value;
+            //     let wynik = potega(suma);
+            //     divWynik.textContent=wynik;
+            // })
+
+            //Zadanie 5
+            // const liczba1 = document.querySelector('input[name=liczba1]')
+            // const liczba2 = document.querySelector('input[name=liczba2]')
+            // const btn = document.querySelector('button')
+            // const divWynik = document.querySelector('div.wynik')
+
+            // function silnia(liczba) {
+            //     let silnia_z_liczby = 1;
+            //     for(let i = 1; i <= liczba; i++) {
+            //         silnia_z_liczby = silnia_z_liczby * i;
+            //     }
+            //     return silnia_z_liczby;
+            // }
+
+            // btn.addEventListener('click', () => {
+            //     let n = parseInt(liczba1.value);
+            //     let k = parseInt(liczba2.value);
+            //     if ((n > k) && (k > 0) && (n <= 12)) {
+            //         let silniaN = silnia(n);
+            //         let silniaK = silnia(k);
+            //         let silniaN_K = silnia(n-k);
+            //         let symbolNewtona = silniaN / (silniaK * silniaN_K)
+            //         divWynik.textContent = symbolNewtona;
+            //     } else {
+            //         document.write("błędne dane")
+            //     }
+            // })
+
+            //Zadanie 6
+            const liczba1 = document.querySelector('input[name=liczba1]')
+            const btn = document.querySelector('button')
+            const divWynik = document.querySelector('div.wynik')
+
+            btn.addEventListener('click', () => {
+                let l1 = liczba1.value;
+                divWynik.textContent=ileCyfr(l1)
+            })
+
+            function ileCyfr(ciag) {
+                return ciag.length;
+            }
+        </script>
+    </body>
+</html>
