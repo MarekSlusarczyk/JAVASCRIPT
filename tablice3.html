@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Zadanie 4 -->
+        <!-- <input type="text" name="liczba">
+        <button>Potwierdź</button>
+        <div></div> -->
+
+        <!-- Zadanie 5 -->
+        <input type="text" name="poczatek" placeholder="Początek zakresu">
+        <input type="text" name="koniec" placeholder="Koniec zakresu">
+        <button>Potwierdź</button>
+        <div></div>
+        <script>
+            // Zadanie 4
+            // const btn = document.querySelector('button')
+            // const ilosc = document.querySelector('input[name="liczba"]')
+            // const wynik = document.querySelector('div')
+
+            // btn.addEventListener('click', () => {
+            //     let val = ilosc.value
+            //     const liczby = [];
+            //     for (let i = 0; i < val; i++) {
+            //         liczby[i] = Math.round(Math.random() * 100);
+            //     }
+
+            //     let min = liczby[0];
+            //     let max = liczby[val-1];
+
+            //     for (let i = 0; i <= val; i++) {
+            //         if (min > liczby[i]) {
+            //             min = liczby[i]
+            //         }
+            //     }
+
+            //     for (let i = 0; i <= val; i++) {
+            //         if (max < liczby[i]) {
+            //             max = liczby[i];
+            //         }
+            //     }
+
+            //     wynik.innerHTML = liczby.join(', ')
+            //     wynik.innerHTML += "<br>MIN: " + min
+            //     wynik.innerHTML += "<br>MAX: " + max
+            // })
+
+            // Zadanie 5
+            const btn = document.querySelector('button')
+            const poczatek = document.querySelector('input[name="poczatek"]')
+            const koniec = document.querySelector('input[name="koniec"]')
+            const wynik = document.querySelector('div')
+            btn.addEventListener('click', () => {
+                const liczby_wylosowane = [];
+                let min = parseInt(poczatek.value)
+                let max = parseInt(koniec.value)
+                for (let i = min; i <= max; i++) {
+                    let random = Math.floor(Math.random() * (max - min)) + min;
+                    liczby_wylosowane.push(random);
+                }
+
+                const parzyste = [];
+                const nieparzyste = [];
+
+                console.log(liczby_wylosowane)
+
+                for (let i = 0 ; i < liczby_wylosowane.length; i++) {
+                    if (liczby_wylosowane[i] % 2 == 0) {
+                        parzyste.push(liczby_wylosowane[i])
+                    } else {
+                        nieparzyste.push(liczby_wylosowane[i])
+                    }
+                }
+
+                nieparzyste.sort()
+                parzyste.sort()
+                nieparzyste.reverse();
+
+                const polaczone = nieparzyste.concat(parzyste);
+                wynik.innerHTML = 'Liczby: ' + polaczone.join(', ')
+            })
+        </script>
+    </body>
+</html>
