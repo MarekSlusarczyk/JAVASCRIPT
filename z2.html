@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="liczba1" placeholder="Liczba 1">
+        <input type="text" name="liczba2" placeholder="Liczba 2">
+        <input type="text" name="liczba3" placeholder="Liczba 3">
+        <button>Sprawdź</button>
+        <div></div>
+        <script>
+            const l1 = document.querySelector('input[name="liczba1"]');
+            const l2 = document.querySelector('input[name="liczba2"]');
+            const l3 = document.querySelector('input[name="liczba3"]');
+            const btn = document.querySelector('button');
+            const div = document.querySelector('div');
+
+            btn.addEventListener('click', () => {
+                let liczba1 = parseInt(l1.value);
+                let liczba2 = parseInt(l2.value);
+                let liczba3 = parseInt(l3.value);
+                wyznacz(liczba1, liczba2, liczba3);
+            })
+
+            function wyznacz(a, b, c) {
+                if (a > b && a > c) {
+                    div.innerHTML = 'Najwieksza liczba to ' + a;
+                } else if (b > a && b > c) {
+                    div.innerHTML = 'Najwieksza liczba to ' + b;
+                } else {
+                    div.innerHTML = 'Najwieksza liczba to ' + c;
+                }
+            }
+        </script>
+    </body>
+</html>

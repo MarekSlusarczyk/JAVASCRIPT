@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            const div = document.querySelector('div');
+
+            const liczbyNieparzyste = [];
+            for (let i = 0; i < 100; i++) {
+                let wylosowana = Math.floor(Math.random() * 1000);
+                if (wylosowana % 2 != 0) {
+                    liczbyNieparzyste.push(wylosowana);
+                } else {
+                    i--;
+                }
+            }
+
+            let suma = 0;
+            for (let i = 0; i < 100; i++) {
+                suma += liczbyNieparzyste[i];
+            }
+
+            const liczbyzakres = [];
+            for (let i = 0; i < 100; i++) {
+                if (liczbyNieparzyste[i] >= 300 && liczbyNieparzyste[i] <= 500) {
+                    liczbyzakres.push(liczbyNieparzyste[i]);
+                }
+            }
+
+            div.innerHTML = '<p>Tablica liczb nieparzystych: ' + liczbyNieparzyste.join(', ') + '</p>';
+            div.innerHTML += '<p>Suma liczb w tablicy: ' + suma + '</p>';
+            div.innerHTML += '<p>Liczby z zakresu 300-500: ' + liczbyzakres.join(', ') + '</p>';
+            
+        </script>
+    </body>
+</html>
