@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Zadanie 0 -->
+        <!-- <input type="text" name="l1">
+        <input type="text" name="l2">
+        <div style="margin-top: 10px;">
+            <button id="suma">Suma</button>
+            <button id="roznica">Różnica</button>
+            <button id="iloczyn">Iloczyn</button>
+            <button id="iloraz">Iloraz</button>
+        </div>
+        <div id="wynik"></div>
+        <script>
+            const pole1 = document.querySelector('input[name="l1"]');
+            const pole2 = document.querySelector('input[name="l2"]');
+            const btn_suma = document.querySelector('button[id="suma"]');
+            const btn_roznica = document.querySelector('button[id="roznica"]');
+            const btn_iloczyn = document.querySelector('button[id="iloczyn"]');
+            const btn_iloraz = document.querySelector('button[id="iloraz"]');
+            const div_wynik = document.querySelector('div[id="wynik"]');
+
+            function getNumbers() {
+                let numbers = {
+                    number1: parseInt(pole1.value), 
+                    number2: parseInt(pole2.value)
+                };
+                return numbers;
+            };
+
+            btn_suma.addEventListener("click", function() {
+                div_wynik.innerHTML = `Suma liczb wynosi: ${getNumbers().number1 + getNumbers().number2}`;
+            });
+
+            btn_roznica.addEventListener("click", function() {
+                div_wynik.innerHTML = `Różnica liczb wynosi: ${getNumbers().number1 - getNumbers().number2}`;
+            });
+
+            btn_iloczyn.addEventListener("click", function() {
+                div_wynik.innerHTML = `Iloczyn liczb wynosi: ${getNumbers().number1 * getNumbers().number2}`;
+            });
+
+            btn_iloraz.addEventListener("click", function() {
+                if (getNumbers().number2 == 0) {
+                    div_wynik.innerHTML = `Nie można dzielić przez 0`;
+                    return
+                };
+                div_wynik.innerHTML = `Iloraz liczb wynosi: ${getNumbers().number1 / getNumbers().number2}`;
+            });
+        </script> -->
+
+        <!-- Zadanie 1 -->
+        <!-- <div></div>
+        <script>
+            let div = document.querySelector('div')
+            let date = new Date();
+
+            let month = date.getMonth() + 1
+            div.innerHTML = date.getFullYear() + ' / ' + month + ' / ' + date.getDate()
+        </script> -->
+
+        <!-- Zadanie 2 -->
+        <!-- <div></div>
+        <script>
+            let div = document.querySelector('div')
+            let date = new Date();
+            let days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"]
+            div.innerHTML = days[date.getDay()-1]
+        </script> -->
+
+        <!-- Zadanie 3 -->
+        <!-- <div></div>
+        <script>
+            let div = document.querySelector('div');
+            let date = new Date();
+            let date2 = new Date();
+            let today = date.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
+            let end = date2.setFullYear(2024, 5, 21);
+            let left = ((end - today) / 1000) / 86400
+            div.innerHTML = `Do końca roku szkolnego pozostało ${left} dni`;
+        </script> -->
+
+        <!-- Zadanie 4 -->
+        <!-- <div></div>
+        <script>
+            time();      
+            function time() {   
+                let div = document.querySelector('div')
+                let date = new Date();
+                let days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"]
+                let months = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"]
+                let day = date.getDate()
+                if (day < 10) {
+                    day = `0${date.getDate()}`
+                }
+                div.innerHTML = `Dnia dzisiejszego mamy ${days[date.getDay()-1]}, ${day} ${months[date.getMonth()]} ${date.getFullYear()} <br>Godzina: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+                setTimeout(time, 1000)
+            }
+        </script> -->
+    </body>
+</html>
