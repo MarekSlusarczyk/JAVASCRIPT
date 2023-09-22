@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- <style>
+            .red {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+            }
+
+            .blue {
+                background-color: blue;
+                width: 200px;
+                height: 50px;
+            }
+        </style> -->
+    </head>
+    <body>
+        <!-- <div class="red">
+            <div class="blue">
+
+            </div>
+        </div>
+        <script>
+            const divRed = document.querySelector('.red')
+            const divBlue = document.querySelector('.blue')
+
+            divRed.addEventListener('click', () => {
+                alert('kliknięto w czerwony div');
+            })
+
+            divBlue.addEventListener('click', (e) => {
+                e.stopPropagation();
+                alert('kliknięto w niebieski div');
+            })
+        </script> -->
+
+        <!-- Zadanie 1 -->
+        <!-- <button>Przycisk 1</button>
+        <button>Przycisk 2</button>
+        <script>
+            const buttons = document.querySelectorAll('button')
+            buttons[0].addEventListener('click', () => {
+                alert('Przycisk 1')
+            })
+
+            buttons[1].addEventListener('click', () => {
+                alert('Przycisk 2')
+            })
+        </script> -->
+
+
+        <!-- Zadanie 2 -->
+        <!-- <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, optio.</div>
+        <script>
+            const div = document.querySelector('div');
+            div.addEventListener('mousemove', () => {
+                div.innerHTML = 'Inny tekst'
+            })
+
+            div.addEventListener('dblclick', () => {
+                div.style.color = 'red'
+            })
+        </script> -->
+
+        <!-- Zadanie 3 -->
+        <!-- <style>
+            .bgc {
+                background-color: violet;
+            }
+        </style>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero inventore accusamus voluptatibus rerum perspiciatis numquam, iure autem possimus voluptate! Saepe!</p>
+        <script>
+            const p = document.querySelector('p');
+            p.addEventListener('mousemove', function() {
+                p.classList.add('bgc');
+            })
+            p.addEventListener('mouseout', function() {
+                p.classList.remove('bgc');
+            })
+        </script> -->
+
+        <!-- Zadanie 4 -->
+        <!-- <div></div>
+        <script>
+            const div = document.querySelector('div')
+            document.addEventListener('keydown', (e) => {
+                div.innerHTML = e.keyCode 
+            })
+        </script> -->
+
+        <!-- Zadanie 5 -->
+        <!-- <div></div>
+        <script>
+            const div = document.querySelector('div')
+            document.addEventListener('mousemove', (e) => {
+                div.innerHTML = 'X:' + e.clientX + ' Y:' + e.clientY; 
+            })
+        </script> -->
+
+        <!-- Zadanie 6 -->
+        <img style="max-width: 200px; height: auto;" src="https://zsnr4.net/images/logozs4kolor.png" alt="Logo szkoły">
+        <script>
+            const img = document.querySelector('img')
+            img.addEventListener('mousemove', () => {
+                img.setAttribute('src', 'https://img.freepik.com/premium-vector/hand-click-icon-trendy-outline-style-design-vector-graphic-illustration-click-symbol-website-design-logo-app-ui_175838-2817.jpg?w=2000')
+            })
+
+            img.addEventListener('mouseout', () => {
+                img.setAttribute('src', 'https://zsnr4.net/images/logozs4kolor.png')
+            })
+
+            img.addEventListener('click', () => {
+                window.open("https://zsnr4.net");
+            })
+        </script>
+    </body>
+</html>

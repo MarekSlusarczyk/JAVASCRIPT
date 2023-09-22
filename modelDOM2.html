@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            h1 {
+                color: white;
+                background-color: black;
+            }
+
+            div {
+                font-size: 1.5rem;
+                color: red;
+            }
+
+            p {
+                font-family: Arial;
+            }
+
+            .font {
+                font-family: Tahoma;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="nn">Nagłówek</h1>
+        <div class="dd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptates?</div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora dignissimos vitae quis alias ullam perferendis illum culpa illo, eos dolor amet, enim aliquam ab fuga porro vel eius. Ratione provident quis itaque hic labore voluptates sint omnis, cupiditate laboriosam laborum sit harum nostrum culpa mollitia libero! Praesentium repellat dolorum vitae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus enim ipsam quis a optio laborum voluptatibus nulla quia asperiores ratione! Minus temporibus repellendus dicta, quisquam vel laborum harum ipsam quidem sit odio voluptates rem quam delectus alias ipsum sequi distinctio beatae voluptatum eius velit tenetur consequuntur. Alias ab consequuntur omnis.</p>
+        <script>
+            const h1 = document.querySelector('#nn');
+            const div = document.querySelector('.dd');
+            const akapity = document.querySelectorAll('p');
+
+            akapity[0].innerHTML +=' Bardzo lubię się uczyć!';
+            h1.textContent = "JavaScript";
+            // div.style.fontFamily = 'Tahoma';
+            div.classList.add('font');
+
+            akapity[1].innerHTML += '<h2>Aplikacje internetowe</h2>';
+            h1.remove();
+        </script>
+    </body>
+</html>
