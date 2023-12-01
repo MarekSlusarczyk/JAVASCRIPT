@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <form action="" method="post">
+            <input type="text" name="nazwa">
+            <input type="submit" value="Wyślij">
+        </form>
+        <div></div>
+        <script>
+            const formularz = document.querySelector('form');
+            const poleNazwa = document.querySelector('input[name="nazwa"]');
+            const div = document.querySelector('div');
+            
+
+            formularz.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nazwa = poleNazwa.value;
+                if (nazwa === '') div.textContent = 'uzupełnij pole';
+                else div.textContent = nazwa;
+
+                // walidacja kodu pocztowego
+                const wzorKoduPocztowego = new RegExp('^[0-9]{2}-[0-9]{3}$');
+                if (wzorKoduPocztowego.test(nazwa)) {
+                    div.textContent = `Podano prawidłowy kod pocztowy ${nazwa}`;
+                } else {
+                    div.textContent = `Podano niepoprawny kod pocztowy`;
+                }
+            })
+        </script> -->
+
+        <!-- Zadanie 3 -->
+        <!-- <form action="" method="post">
+            <textarea name="tekst"></textarea>
+            <br>
+            <input type="text" name="wzorzec">
+            <input type="submit" value="Wyślij">
+        </form>
+        <div></div>
+        <script>
+            const formularz = document.querySelector('form');
+            const textarea = document.querySelector('textarea[name="tekst"]');
+            const wzor = document.querySelector('input[name="wzorzec"]');
+            const div = document.querySelector('div')
+            formularz.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let textarea_value = textarea.value;
+                let wzor_value = wzor.value;
+                let iloscPowtorzen = 0;
+                for(let i = 0; i <= textarea_value.length; i++) {
+                    if (textarea_value.slice(i, i+wzor_value.length) === wzor_value) {
+                        iloscPowtorzen++;
+                    }
+                }
+                div.innerHTML = `Ilość powtórzeń wyrazu ${wzor_value} to: ${iloscPowtorzen}`;
+            })
+        </script> -->
+
+        <!-- Zdanie 4 -->
+        <form action="" method="">
+            <input type="radio" name="figura" value="kwadrat">Kwadrat<br>
+            <input type="radio" name="figura" value="prostokat">Prostokąt<br>
+            <input type="radio" name="figura" value="okrag">Okrąg<br>
+            <div class="kwadrat" style="display: none;">
+                <input type="text" name="bokKwadratu" placeholder="Bok kwadratu">
+            </div>
+            <div class="prostokat" style="display: none;">
+                <input type="text" name="bokProstokata1" placeholder="Bok prostokąta">
+                <input type="text" name="bokProstokata2" placeholder="Bok prostokąta">
+            </div>
+            <div class="okrag" style="display: none;">
+                <input type="text" name="promien" placeholder="Promień okręgu">
+            </div>
+            <input type="submit" value="Wyślij">
+        </form>
+        <div class="wynik"></div>
+
+        <script>
+            const inputs = document.querySelectorAll('input[name="figura"]')
+            inputs.forEach(element => {
+                element.addEventListener('change', () => {
+                    const div = document.querySelectorAll('form div')
+                    div.forEach(element2 => {
+                        if (element2.className == element.value) {
+                            element2.style.display = 'block'
+                        } else {
+                            element2.style.display = 'none'
+                        }
+                    })
+                    
+                })
+            })
+
+            const formularz = document.querySelector('form')
+            let wynik = '';
+            const divWynik = document.querySelector('div.wynik')
+            formularz.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (inputs[0].checked) {
+                    // console.log(inputs[0].value);
+                    const div = document.querySelector('div.'+inputs[0].value)
+                    const bok = div.querySelector('input[name="bokKwadratu"]')
+                    if (!isNaN(bok.value)) {
+                        wynik = bok.value * bok.value;
+                    } else {
+                        wynik = 'Nie podano poprawnych danych'
+                    }
+                    divWynik.innerHTML = 'Wynik: ' + wynik;
+                } else if (inputs[1].checked) {
+                    // console.log(inputs[1].value);
+                    const div = document.querySelector('div.'+inputs[1].value)
+                    const bok1 = div.querySelector('input[name="bokProstokata1"]')
+                    const bok2 = div.querySelector('input[name="bokProstokata2"]')
+                    if (!isNaN(bok1.value) && !isNaN(bok2.value)) {
+                        wynik = bok1.value * bok2.value;
+                    } else {
+                        wynik = 'Nie podano poprawnych danych'
+                    }
+                    divWynik.innerHTML = 'Wynik: ' + wynik;
+                } else if (inputs[2].checked) {
+                    // console.log(inputs[2].value);
+                    const div = document.querySelector('div.'+inputs[2].value)
+                    const promien = div.querySelector('input[name="promien"]')
+                    if (!isNaN(promien.value)) {
+                        wynik = 2 * 3.14 * promien.value;
+                    } else {
+                        wynik = 'Nie podano poprawnych danych'
+                    }
+                    divWynik.innerHTML = 'Wynik: ' + wynik;
+                } else {
+                    console.log('nie wybrano figury')
+                }
+            })
+        </script>
+    </body>
+</html>
