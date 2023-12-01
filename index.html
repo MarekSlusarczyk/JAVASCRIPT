@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OOP JS</title>
+    </head>
+    <body>
+        <div></div>
+        <script src="./Samochod.js"></script>
+        <script src="./Komis.js"></script>
+        <script>
+            const div = document.querySelector('div');
+
+            // tworzymy obiekty na podstawie klasy Samochod
+            const auto1 = new Samochod('Opel', 'Astra', 1500, 1999, 6);
+            const auto2 = new Samochod('Toyota', 'Yaris', 9999, 2005, 5);
+
+            // Tworzymy nasz komis
+            const komis1 = new Komis('Tuptuś i spółka');
+            // do komisu dodajemy samochody
+            komis1.dodajSamochod(auto1);
+            komis1.dodajSamochod(auto2); 
+            
+
+            // wyświetlamy dane pierwszego obiektu auto1
+            div.innerHTML = `<div>Marka samochodu: ${auto1.marka}</div>
+            <div>Model samochodu: ${auto1.model}</div>
+            <div>Cena samochodu: ${auto1.cena}</div>
+            <div>Rocznik samochodu: ${auto1.rocznik}</div>
+            <div>Spalanie samochodu: ${auto1.spalanie}l/100km</div>
+            <div>Wiek samochodu: ${auto1.wiek()} lat(a)</div>
+            <div>Koszt paliwa na 100km: ${auto1.koszt()}</div>`;
+            div.innerHTML += '<br>'
+            div.innerHTML += `<div>Marka samochodu: ${auto2.marka}</div>
+            <div>Model samochodu: ${auto2.model}</div>
+            <div>Cena samochodu: ${auto2.cena}</div>
+            <div>Rocznik samochodu: ${auto2.rocznik}</div>
+            <div>Spalanie samochodu: ${auto2.spalanie}l/100km</div>
+            <div>Wiek samochodu: ${auto2.wiek()} lat(a)</div>
+            <div>Koszt paliwa na 100km: ${auto2.koszt()}</div>`;
+        </script>
+    </body>
+</html>
