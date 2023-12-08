@@ -33,8 +33,9 @@ class Komis {
         for (let i = 0; i <= this.samochody.length; i++) {
             if (this.samochody[i].marka == marka && this.samochody[i].model == model) {
                 return true;
+            } else {
+                return false;
             }
         }
-        return false;
     }
 }
