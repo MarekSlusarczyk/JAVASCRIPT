@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <title>jQuery</title>
+        <!-- Zadanie 6 -->
+        <!-- <style>
+            span {
+                font-style: italic;
+            }
+        </style> -->
+    </head>
+    <body>
+        <!-- Zadanie 6 -->
+        <!-- <p>Lorem, ipsum dolor sit <span>amet consectetur</span> adipisicing elit. <span>Dolorum</span> porro quod ab nostrum minus magni impedit temporibus <span>sequi sit</span> est. Aspernatur, beatae ipsa <span>veritatis necessitatibus</span> reiciendis in officia atque iusto.</p>
+        <button>Usuń</button>
+
+        <script>
+            $('button').click(function() {
+                $('span').remove();
+            })
+        </script> -->
+
+        <!-- Zadanie 5 -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla hic quam officiis ipsa, ab provident eius voluptatum autem possimus. Incidunt nesciunt enim earum nulla quod ullam labore odio quisquam quos, obcaecati illo ipsum, itaque repellat fuga minima unde aspernatur. Consectetur!</p>
+        <button>ab</button><button>gg</button><button>dc</button><button>Spacja</button>
+        <script>
+            // jQuery
+            // $('button').click(function() {
+            //     if ($(this).text() === 'Spacja') {
+            //         $('p').append(' ')
+            //     } else {
+            //         $('p').append($(this).text()) 
+            //     }
+            // })
+
+            // JS
+            const buttons = document.querySelectorAll('button');
+            const p = document.querySelector('p');
+            buttons.forEach(e => {
+                e.addEventListener('click', function() {
+                    // console.log(this.textContent)
+                    if (this.textContent === 'Spacja') {
+                        p.innerHTML += ' ';
+                    } else {
+                        p.innerHTML += this.textContent;
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>
