@@ -38,10 +38,14 @@
 
         <!-- Zadanie 3 -->
         <script>
+            let clicked = false;
             $('body').append('<div>Pytanie: Czym jest jabłko?</div><br><button>Wyświetl odpowiedź</button>')
             $('button').on('click', function() {
-                $('body').append('<div id="answer" style="display: none;">Owocem</div>')
-                $('div#answer').slideDown(9000)
+                if (!clicked) {
+                    clicked = true;
+                    $('body').append('<div id="answer" style="display: none; font-size: 50px;">Owocem</div>')
+                    $('div#answer').slideDown(9000)
+                }
             })
                 
         </script>
