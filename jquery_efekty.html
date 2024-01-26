@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Efekty jQuery</title>
+
+        <!-- Zadanie 1 -->
+        <!-- <style>
+            form {
+                width: 200px;
+                height: 200px;
+                border: 2px solid black;
+                display: none;
+            }
+        </style> -->
+
+        <!-- Zadanie 3 -->
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <!-- Zadanie 1 -->
+        <!-- <button>Formularz</button>        
+        <form method="get">
+            <label>Nazwa</label>
+            <input type="text" placeholder="nazwa">
+        </form>
+        <script>
+            $('button').on('click', function() {
+                $('form').slideDown(1000)
+            })
+        </script> -->
+
+
+        <!-- Zadanie 3 -->
+        <script>
+            $('body').append('<div>Pytanie: Czym jest jabłko?</div><br><button>Wyświetl odpowiedź</button>')
+            $('button').on('click', function() {
+                $('body').append('<div id="answer" style="display: none;">Owocem</div>')
+                $('div#answer').slideDown(9000)
+            })
+                
+        </script>
+    </body>
+</html>
