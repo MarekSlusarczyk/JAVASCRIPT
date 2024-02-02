@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Document</title>
+
+        <!-- Zadanie 1 -->
+        <style>
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 500px;
+                height: auto;
+            }
+        </style>
+
+        <!-- Zadanie 2 -->
+        <!-- <style>
+            div.pasek {
+                width: 0;
+                height: 50px;
+                background-color: orange;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            div.procenty {
+                font-family: Arial;
+                font-weight: bold;
+                color: white;
+                margin-left: 3px;
+            }
+        </style> -->
+    </head>
+    <body>
+        <!-- Zadanie 2 -->
+        <!-- <div class="pasek"><div class="procenty"></div></div>
+
+        <script>
+            let char = '.';
+            let charCount = 1;
+            $('div.pasek').animate({
+                width: '100%',
+            }, 10000, 'linear', function() {
+                clearInterval(interval)
+            })
+            const interval = setInterval(function() {
+                let percent  = Math.ceil(100 * $('.pasek').width() / $(document).width());
+                if (charCount > 4) {
+                    charCount = 0;
+                    char = '.';
+                } else {
+                    char += '.';
+                }
+                charCount++;
+                if (percent === 100) {
+                    char = '';
+                }
+                $('div.procenty').html(percent + '%' + char);
+            }, 100)
+        </script> -->
+
+        <!-- Zadanie 1 -->
+        <button id="click">Kliknij mnie ;)</button>
+        <button id="stop">Stop</button>
+        <img src="https://i.wpimg.pl/1200x/filerepo.grupawp.pl/api/v1/display/embed/acb12a33-2d01-406a-86f6-1e273b77f28a" alt="obrazek">
+
+        <script>
+            $('button#click').on('click', function() {
+                $('img').animate({
+                    top: '-50%',
+                }, 1000, 'linear', function() {
+                    $('img').hide();
+                    setTimeout(() => {
+                        $('img').css({
+                            "top":"50%",
+                        });
+                        
+                        $('img').show();
+
+                        $('img').animate({
+                            left: '100%',
+                        }, 1500, 'linear', function() {
+                            $('img').animate({
+                                left: '0%',
+                            }, 3000, 'linear')
+
+                            $('img').slideUp(5000)
+                        })
+                    }, 1000)
+                })
+            })
+
+            $('button#stop').on('click', function() {
+                $('img').stop();
+                $('img').css({
+                    "top":"50%",
+                    "left":"50%",
+                });
+            })
+        </script>
+    </body>
+</html>
